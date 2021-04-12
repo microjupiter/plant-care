@@ -5,7 +5,7 @@ class PlantsController < ApplicationController
   def index
     @plants = Plant.all
 
-    render json: @plants
+    render json: @plants, include: [:species]
   end
 
   # GET /plants/1
@@ -36,6 +36,7 @@ class PlantsController < ApplicationController
   # DELETE /plants/1
   def destroy
     @plant.destroy
+    render json: @plant
   end
 
   private
@@ -46,6 +47,6 @@ class PlantsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def plant_params
-      params.fetch(:plant, {})
+      params.require(:plant).permit(:name, :notes, :species_attributes)
     end
 end
