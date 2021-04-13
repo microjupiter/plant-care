@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import { addPlant } from '../actions'
 
 class Form extends Component {
   state= {
