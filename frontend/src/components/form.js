@@ -26,12 +26,12 @@ class Form extends Component {
         <h2>Add a new Plant</h2>
         <form onSubmit= {this.handleSubmit}>
           <div>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Name </label>
             <input className="inputs" type="text"
             id="name" name="name" value={ this.state.name } onChange={ this.handleChange } />
             <br />
             <br />
-            <label htmlFor="species_attributes">Species</label>
+            <label htmlFor="species_attributes">Species </label>
             <input className="inputs" type="text" id="species_attributes" name="species_attributes" value={ this.state.species_attributes } onChange={this.handleChange }/>
             <br />
             <br />
@@ -44,5 +44,6 @@ class Form extends Component {
       </div>
     )
   }
+}
 
 export default connect(null, { addPlant })(Form)
