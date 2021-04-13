@@ -1,6 +1,6 @@
 export const getPlants = () => {
   return dispatch => {
-    dispatch({ type: "LOADING "})
+    dispatch({ type: "LOADING"})
     fetch("http://localhost:3001/plants")
     .then(resp => resp.json())
     .then(plants => dispatch({ type: "SET_PLANTS", plants}))

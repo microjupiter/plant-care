@@ -1,15 +1,14 @@
 import React, { Component } from 'react'
-import './App.css';
+import './App.css'
 import Home from './components/home'
-import {BrowserRouter as Router, Switch, Route } from  'react-router-dom';
-import { connect} from 'react-redux'
-import {getPlants } from './actions'
+import { BrowserRouter as Router, Switch, Route } from  'react-router-dom'
+import { connect } from 'react-redux'
+import { getPlants } from './actions'
 import About from './components/about'
 import Index from './components/index'
 import Error from './components/error'
 import Form from './components/form'
-import Footer from '/components/footer'
-import Nav from '/components/nav'
+
 
 class App extends Component {
 
@@ -23,21 +22,27 @@ class App extends Component {
         <h3>Loading...</h3>
       )
     }
-  }
+  
 
   return (
       <Router>
-      <Nav />
       <Switch>
-        <Route exact path="/" component={ Home }/>
-        <Route exact path="/about" component={ About }/>
-        <Route exact path="/plants" component={ Index }/>
-        <Route exact path="/plants/new" component={ Form }/>
+        <Route exact path="/" component={ Home } />
+        <Route exact path="/about" component={ About } />
+        <Route exact path="/plants" component={ Index } />
+        <Route exact path="/plants/new" component={ Form } />
         <Route component={ Error } />
         </Switch>
-        <Footer />
         </Router>
     )
   }
+}
 
-export default App
+  const mapStateToProps = state => {
+    return {
+      loading: state.loading
+    }
+  }
+
+
+export default connect(mapStateToProps, { getPlants })(App)

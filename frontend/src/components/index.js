@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import plantItem from './plantitem'
+import PlantItem from './plantitem'
 import {deletePlant} from '../actions/index'
 
 
