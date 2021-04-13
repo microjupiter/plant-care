@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Logo from './Images/Logo.jpg'
-// import Image from 'material-ui-image'
+import Image from 'material-ui-image'
 
 
 
@@ -10,7 +10,7 @@ class Home extends Component {
   render() {
     return (
       <div className='App'>
-        <img src={background} />
+        <Image aspectRatio={(16/9)} src={background} />
       </div>
     )
   }
