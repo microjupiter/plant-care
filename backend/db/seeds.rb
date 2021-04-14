@@ -10,7 +10,7 @@
 alocasia = Species.create(name: 'Alocasia')
 aloe = Species.create(name: 'Aloe')
 philodendron = Species.create(name: 'Philodendron')
-sansevieria = Species.create(name: 'sansevieria')
+sansevieria = Species.create(name: 'Sansevieria')
 cacti = Species.create(name: 'Cacti')
 
 Plant.create([

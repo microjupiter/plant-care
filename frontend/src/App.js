@@ -3,11 +3,12 @@ import './App.css'
 import Home from './components/home'
 import { BrowserRouter as Router, Switch, Route } from  'react-router-dom'
 import { connect } from 'react-redux'
-import { getPlants } from './actions'
+import { getPlants } from './actions/index.js'
 import About from './components/about'
 import Index from './components/index'
 import Error from './components/error'
 import Form from './components/form'
+import Nav from './components/nav'
 
 
 class App extends Component {
@@ -26,6 +27,7 @@ class App extends Component {
 
   return (
       <Router>
+        <Nav />
       <Switch>
         <Route exact path="/" component={ Home } />
         <Route exact path="/about" component={ About } />

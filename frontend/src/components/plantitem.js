@@ -16,7 +16,7 @@ class PlantItem extends Component {
           <h4> {species} </h4>
           <p> {notes} </p>
           <br />
-          <button className="button-color" onClick={() => this.props.deletePlant (id, this.props.history )}>Success</button> 
+          <button className="button-color" onClick={() => this.props.deletePlant (id, this.props.history )}>Delete Plant</button> 
           </div>
       </div>
     )
