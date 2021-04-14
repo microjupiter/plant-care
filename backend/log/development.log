@@ -445,3 +445,151 @@ Processing by PlantsController#index as */*
 Completed 200 OK in 46ms (Views: 45.5ms | ActiveRecord: 27.5ms | Allocations: 5342)
 
 
+Started GET "/plants" for ::1 at 2021-04-14 13:07:32 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (1.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (1.6ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (1.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (1.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 402ms (Views: 401.5ms | ActiveRecord: 379.6ms | Allocations: 5345)
+
+
+Started DELETE "/plants/3" for ::1 at 2021-04-14 13:07:43 -0500
+Processing by PlantsController#destroy as JSON
+  Parameters: {"id"=>"3", "plant"=>{}}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:45:in `set_plant'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:38:in `destroy'
+  [1m[36mPlant Destroy (43.9ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/plants_controller.rb:38:in `destroy'
+  [1m[36mTRANSACTION (36.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:38:in `destroy'
+Completed 200 OK in 104ms (Views: 0.3ms | ActiveRecord: 80.9ms | Allocations: 2060)
+
+
+Started GET "/plants" for ::1 at 2021-04-14 13:15:54 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (1.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (1.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (0.8ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 210ms (Views: 209.9ms | ActiveRecord: 12.9ms | Allocations: 4514)
+
+
+Started GET "/plants" for ::1 at 2021-04-14 13:27:45 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (1.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (1.9ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (1.7ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 159ms (Views: 158.6ms | ActiveRecord: 143.2ms | Allocations: 4440)
+
+
+Started GET "/plants" for ::1 at 2021-04-14 13:33:48 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (2.0ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 54ms (Views: 53.9ms | ActiveRecord: 34.5ms | Allocations: 4440)
+
+
+Started GET "/plants" for ::1 at 2021-04-14 13:33:51 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (2.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (3.4ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (0.4ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 10.1ms | ActiveRecord: 5.8ms | Allocations: 2379)
+
+
+Started GET "/plants" for ::1 at 2021-04-14 13:37:55 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (2.4ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (0.5ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 20ms (Views: 16.2ms | ActiveRecord: 3.4ms | Allocations: 2378)
+
+
+Started GET "/plants" for ::1 at 2021-04-14 13:38:09 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (1.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (6.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (0.8ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 16ms (Views: 8.0ms | ActiveRecord: 8.2ms | Allocations: 2378)
+
+
+Started GET "/plants" for ::1 at 2021-04-14 13:38:18 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (0.3ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 7.3ms | ActiveRecord: 0.9ms | Allocations: 2378)
+
+
+Started GET "/plants" for ::1 at 2021-04-14 13:38:54 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (1.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (1.8ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 3.4ms | Allocations: 2378)
+
+
+Started GET "/plants" for ::1 at 2021-04-14 13:39:57 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (1.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (1.4ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 3.0ms | Allocations: 2378)
+
+
+Started GET "/plants" for ::1 at 2021-04-14 13:40:07 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (1.5ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (1.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 3.2ms | Allocations: 2378)
+
+
+Started GET "/plants" for ::1 at 2021-04-14 13:40:31 -0500
+Processing by PlantsController#index as */*
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+  [1m[36mSpecies Load (0.2ms)[0m  [1m[34mSELECT "species".* FROM "species" WHERE "species"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:8:in `index'
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.8ms | Allocations: 2378)
+
+
