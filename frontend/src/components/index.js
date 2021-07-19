@@ -6,8 +6,8 @@ import {deletePlant} from '../actions/index'
 
 class Index extends Component {
   render() {
-    const plants = this.props.plants.map( (plant, i) =>
-    <PlantItem key={i} name={ plant.name } notes={ plant.notes } id={ plant.id } history={this.props.history}/>)
+    const plants = this.props.plants.map( (plant, i) => 
+    <PlantItem key={i} name={ plant.name } notes={ plant.notes } id={ plant.id } history={this.props.history} species_attributes={plant.species.name}/>)
     return (
       <div>
         { plants }
