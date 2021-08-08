@@ -9,7 +9,7 @@ export const getPlants = () => {
 
 export const addPlant = (plant, history) => {
   return dispatch => {
-    console.log(plant)
+
     fetch('http://localhost:3001/plants', {
       method: 'POST',
       headers: {

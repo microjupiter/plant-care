@@ -15,11 +15,41 @@ class Form extends Component {
     })
   }
 
-  handleSubmit = e => {
-    e.preventDefault()
+  handleValidation(){
+  
+    let formIsValid = true;
+  
 
-    this.props.addPlant(this.state, this.props.history)
+    //Name
+    if(this.state.name === " "){
+       formIsValid = false;
+    }
+
+    //Species
+    if(this.state.species === " "){
+      formIsValid = false;
+   }
+
+   //Notes
+   if(this.state.notes === " "){
+    formIsValid = false;
+ }
+   return formIsValid;
   }
+
+
+  handleSubmit = e => {
+    e.preventDefault();
+
+    if(this.handleValidation()) {
+      this.props.addPlant(this.state, this.props.history);
+    }else{
+      alert("Form has errors")
+    }
+    }
+
+    
+  
 
   render() {
     return (

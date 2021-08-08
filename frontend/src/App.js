@@ -9,6 +9,7 @@ import Index from './components/index'
 import Error from './components/error'
 import Form from './components/form'
 import Nav from './components/nav'
+import Footer from './components/footer'
 
 
 class App extends Component {
@@ -35,6 +36,7 @@ class App extends Component {
         <Route exact path="/plants/new" component={ Form } />
         <Route component={ Error } />
         </Switch>
+        <Footer />
         </Router>
     )
   }
