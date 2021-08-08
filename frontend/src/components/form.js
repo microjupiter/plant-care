@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { addPlant } from '../actions'
+import { TextField } from '@material-ui/core';
+import { Button } from '@material-ui/core';
+import { Icon } from '@material-ui/core';
+
+
 
 class Form extends Component {
   state= {
@@ -49,6 +54,8 @@ class Form extends Component {
     }
 
     
+
+    
   
 
   render() {
@@ -58,18 +65,18 @@ class Form extends Component {
         <form onSubmit= {this.handleSubmit}>
           <div>
             <label htmlFor="name">Name </label>
-            <input className="inputs" type="text"
+            <TextField variant="outlined" input className="inputs" type="text"
             id="name" name="name" value={ this.state.name } onChange={ this.handleChange } />
             <br />
             <br />
             <label htmlFor="species_attributes">Species </label>
-            <input className="inputs" type="text" id="species_attributes" name="species_attributes" value={ this.state.species_attributes } onChange={this.handleChange }/>
+            <TextField variant="outlined" input className="inputs" type="text" id="species_attributes" name="species_attributes" value={ this.state.species_attributes } onChange={this.handleChange }/>
             <br />
             <br />
             <label htmlFor="notes">Notes </label>
-            <textarea className="inputs" id="notes" name="notes" value={ this.state.notes } onChange={ this.handleChange} > </textarea>
+            <TextField variant="filled"  className="inputs" id="notes" name="notes" value={ this.state.notes } onChange={ this.handleChange} /> 
           </div>
-        <input className="button-color" type="submit" value="Add Plant"/>
+        <Button variant="contained" type="submit">Add Plant</Button>
         </form>
 
       </div>

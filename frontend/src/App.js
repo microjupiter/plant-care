@@ -10,6 +10,7 @@ import Error from './components/error'
 import Form from './components/form'
 import Nav from './components/nav'
 import Footer from './components/footer'
+import { Container } from '@material-ui/core'
 
 
 class App extends Component {
@@ -27,7 +28,9 @@ class App extends Component {
   
 
   return (
+      
       <Router>
+        <Container />
         <Nav />
       <Switch>
         <Route exact path="/" component={ Home } />

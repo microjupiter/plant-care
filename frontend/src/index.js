@@ -8,14 +8,24 @@ import { createStore, applyMiddleware, compose } from 'redux'
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import plantsReducer from './reducers/plantsreducer'
+import '@fontsource/roboto';
+import { CssBaseline } from '@material-ui/core';
+import { ThemeProvider } from '@material-ui/core'; 
+import theme from './styles/theme';
 
 const store = createStore(plantsReducer, composeWithDevTools(applyMiddleware(thunk)))
 
 ReactDOM.render(
   <React.StrictMode>
+    
+      
     <Provider store={store}>
+    <ThemeProvider theme={theme}>
+    <CssBaseline />
     <App />
+    </ThemeProvider>
     </Provider>
+    
   </React.StrictMode>,
   document.getElementById('root')
 );
