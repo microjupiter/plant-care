@@ -53,12 +53,7 @@ class Form extends Component {
     }
     }
 
-    
-
-    
-  
-
-  render() {
+    render() {
     return (
       <div>
         <h2>Add a new Plant</h2>
@@ -76,12 +71,16 @@ class Form extends Component {
             <label htmlFor="notes">Notes </label>
             <TextField variant="filled"  className="inputs" id="notes" name="notes" value={ this.state.notes } onChange={ this.handleChange} /> 
           </div>
+          <br></br>
         <Button variant="contained" type="submit">Add Plant</Button>
+        
         </form>
 
       </div>
     )
   }
 }
+
+
 
 export default connect(null, { addPlant })(Form)
